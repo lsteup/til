@@ -4,6 +4,7 @@ const { Card } = require("../models/Card");
 const getDueCards = async (req, res) => {
   const cards = await Card.find({ due: true });
   res.json({ cards });
+  //delete this, just queries to get cards
 };
 
 //get all cards
@@ -27,7 +28,7 @@ const getCard = async (req, res) => {
   res.json({ card });
 };
 
-//edit a card
+//update card
 const updateCard = async (req, res) => {
   const cardId = req.params.id;
 
