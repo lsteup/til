@@ -11,8 +11,9 @@ const CardSchema = new Schema({
   course: { type: mongoose.Types.ObjectedId, ref: "Course", required: true },
   //theme: { type: String },
   nextReview: { type: Date },
-  level: { type: Number, default: 0 },
+  interval: { type: Number, default: 0 },
   //children nodes
+  due: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model("Card", CardSchema);
