@@ -8,7 +8,7 @@ const CardSchema = new Schema({
   reviewCount: { type: Number },
   resources: { type: [String] },
   content: { type: String, required: true },
-  course: { type: mongoose.Types.ObjectedId, ref: "Course", required: true },
+  //course: { type: mongoose.Types.ObjectedId, ref: "Course", required: true },
   //theme: { type: String },
   nextReview: { type: Date },
   level: { type: Number, default: 1, max: 10 },

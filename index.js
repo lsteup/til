@@ -13,12 +13,16 @@ app.get("/", (req, res) => {
 });
 
 //routers
+const cardRouter = require("./routes/cardRoutes");
+const courseRouter = require("./routes/courseRoutes");
 
 // error handler
 
 app.use(express.json());
 
 // routes
+app.use("/api/v1/cards", cardRouter);
+app.use("/api/v1/courses", courseRouter);
 
 const port = 3000;
 
