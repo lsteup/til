@@ -11,7 +11,7 @@ const CardSchema = new Schema({
   course: { type: mongoose.Types.ObjectedId, ref: "Course", required: true },
   //theme: { type: String },
   nextReview: { type: Date },
-  interval: { type: Number, default: 0 },
+  level: { type: Number, default: 1, max: 10 },
   //children nodes
   due: { type: Boolean, default: false },
 });
